@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Rate My Professor Grade Visualizer",
+  "version": "1.0",
+  "content_scripts" : [
+  	{
+  		"matches" : [
+  			"*://*.ratemyprofessors.com/*" //This indicates that the extension only works with ratemyprof pages
+  		],
+  		"js": ["content.js"]
+  	}
+  ],
+  "browser_action" : {
+  	"default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js; object-src 'self'"
+  
+}
